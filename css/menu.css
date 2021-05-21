@@ -1,0 +1,15 @@
+.main {
+	display: block;
+	height: max-content;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.356);
+}
+div {
+	color: blanchedalmond;
+	width: 100%;
+	height: max-content;
+	cursor: pointer;
+}
+div:hover {
+	background-color: rgba(252, 252, 252, 0.315);
+}

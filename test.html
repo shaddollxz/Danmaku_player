@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>播放器测试</title>
+        <link rel="stylesheet" href="./css/FontAwesome-all.min.css" />
+        <script src="./css/FontAwesome-all.min.js"></script>
+        <link rel="stylesheet" href="./css/main.css" />
+        <link rel="stylesheet" href="./css/toobar.css" />
+    </head>
+    <body>
+        <input type="file" name="file" id="file" />
+
+        <div class="MainWindow small">
+            <div class="VideoWindow">
+                <video>
+                    <source src="test.mp4" type="video/mp4" />
+                    ！该浏览器不支持html5的video标签！
+                </video>
+                <div class="danmakuWall"></div>
+            </div>
+            <!-- 放在主屏幕下方 用css动画放出来 -->
+            <div class="controler-main">
+                <!-- 进度条 -->
+                <div class="slider">
+                    <div class="slider-progress">
+                        <div class="bigger-progress">
+                            <div class="slider-runway">
+                                <div class="thumb"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 其他控件 -->
+                <div class="controler">
+                    <div class="icons-left">
+                        <i class="fas fa-play fa-lg"></i>
+                    </div>
+
+                    <div class="icons-left">
+                        <i class="fas fa-step-forward fa-lg"></i>
+                    </div>
+
+                    <div class="icons-left timer">
+                        <span class="NowTime">00:00</span>
+                        <span>/</span>
+                        <span class="AllTime">00:00</span>
+                    </div>
+
+                    <div class="icons-left">
+                        <i class="fas fa-sync fa-lg"></i>
+                    </div>
+
+                    <div class="icons-right">
+                        <i class="fas fa-expand fa-lg"></i>
+                    </div>
+
+                    <div class="icons-right">
+                        <i class="fas fa-expand-alt fa-lg"></i>
+                    </div>
+
+                    <div class="icons-right videoSpeed">
+                        <span class="speed">倍速</span>
+                    </div>
+
+                    <div class="icons-right">
+                        <i class="fas fa-cog fa-lg"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/danmaku.js"></script>
+        <script src="js/toobar.js"></script>
+    </body>
+</html>

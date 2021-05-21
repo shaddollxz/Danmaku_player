@@ -1,0 +1,88 @@
+/* 进度条的位置 高 宽 */
+.slider {
+	position: relative;
+	top: 0%;
+	height: 4px;
+	width: 100%;
+}
+/* 初始时进度条 */
+.slider-progress {
+	height: 100%;
+	width: 0%; /* 进度条的初始值 */
+	background-color: red;
+}
+/* 点击时跳转用的进度条 */
+.bigger-progress {
+	position: absolute;
+	height: 16px;
+	width: 100%;
+	top: -6px;
+	left: 0%;
+	cursor: pointer;
+	z-index: 1;
+}
+/* 设置放置拖动按钮的容器 */
+.slider-runway {
+	position: absolute;
+	top: 0px;
+	left: -8px;
+	width: 16px;
+	height: 16px;
+	cursor: pointer; /* 放在元素上时光标的样子 */
+	z-index: 2; /* 元素的堆叠顺序 */
+	visibility: hidden;
+}
+.bigger-progress:hover .slider-runway {
+	visibility: visible;
+}
+/* 按钮的具体样子 */
+.thumb {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 14px;
+	height: 14px;
+	background: #b82525;
+	margin: -7px 0 0 -7px; /* 偏移 */
+	border: 4px solid #fff; /* 边框 */
+	box-sizing: border-box;
+	border-radius: 50%; /* 圆形 */
+}
+
+.controler {
+	position: absolute;
+	top: 21px; /* 根据biggerprogress放 */
+	left: 15px;
+	right: 15px;
+	width: auto;
+	height: 100%;
+}
+/* 文字按钮 */
+.timer,
+.videoSpeed {
+	height: 21.3px;
+	margin-right: 7px;
+	margin-left: 7px;
+}
+.timer > span,
+.videoSpeed > span {
+	width: max-content;
+	color: blanchedalmond;
+	text-shadow: black 0.5px 0px 1px;
+}
+
+/* 图标按钮 */
+.icons-left,
+.icons-right {
+	position: relative;
+	cursor: pointer;
+	margin-right: 7px;
+	margin-left: 7px;
+	color: rgba(245, 240, 240, 0.658);
+}
+.icons-left {
+	float: left;
+}
+.icons-right {
+	float: right;
+}

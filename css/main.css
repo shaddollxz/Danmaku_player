@@ -1,0 +1,62 @@
+/* 放视频 弹幕 的总屏幕 */
+.MainWindow {
+    left: 15%;
+    top: 20%;
+    position: relative;
+    overflow: hidden;
+}
+.small {
+    width: 741px;
+    height: 417px;
+}
+.bigger {
+    width: 988px;
+    height: 556px;
+}
+
+.VideoWindow {
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+}
+video {
+    width: 100%;
+    height: 100%;
+}
+/* 弹幕墙的样式 */
+.danmakuWall {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+/* 总控制台的位置 颜色 大小 */
+.controler-main {
+    position: relative;
+    left: 0%;
+    bottom: 2px;
+    /* bottom: 55px; */
+    height: 55px;
+    width: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0));
+}
+.MainWindow:hover .controler-main {
+    bottom: 51px;
+    /* animation: hideControler 3s forwards; */
+}
+/* 在js中触发：两秒后鼠标没有移动则使用该事件并一直暂停下去
+再次移动鼠标时删除该事件 */
+@keyframes hideControler {
+    0% {
+        bottom: 51px;
+    }
+    50% {
+        bottom: 51px;
+    }
+    100% {
+        bottom: 2px;
+    }
+}
